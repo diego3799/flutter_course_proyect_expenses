@@ -34,7 +34,7 @@ class _NewTransactionState extends State<NewTransaction> {
   }
 
   void _submit(){
-    if(_titleController.text.isEmpty||double.parse(_amountController.text)<=0&&_selectedDate==null)
+    if(_titleController.text.isEmpty||double.parse(_amountController.text)<=0||_selectedDate==null)
     return;
     else{
      widget.addTransaction(_titleController.text,double.parse(_amountController.text),_selectedDate);
